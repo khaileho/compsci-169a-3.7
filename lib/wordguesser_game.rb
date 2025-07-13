@@ -19,12 +19,12 @@ class WordGuesserGame
     end
     if @word.include?(letter) && !@guesses.include?(letter)
       @guesses += letter
-      return true
+      true
     elsif !@word.include?(letter) && !wrong_guesses.include?(letter)
       @wrong_guesses += letter
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
@@ -37,7 +37,7 @@ class WordGuesserGame
         display += '-'
       end
     end
-    return display
+    display
   end
 
   def check_win_or_lose
